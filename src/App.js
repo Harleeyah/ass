@@ -37,7 +37,7 @@ function App() {
       <nav className='navbar'>
         <a className='home-link' href='https://web-platform-bgexer.stackblitz.io'><h5>Home</h5></a>
         <h1 className='github-repos'>My Github Repos</h1>
-        <h4>Error</h4>
+        <a href='https://assignment-omega-nine.vercel.app/'><h4>Error</h4></a>
       </nav>
       <Repos repos={currentRepos} loading={loading}/>
       <Pagination
