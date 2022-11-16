@@ -1,3 +1,4 @@
+import React from "react"
 export const Fallback = () => {
     return <div>
          <h1 className="error-page">404</h1>

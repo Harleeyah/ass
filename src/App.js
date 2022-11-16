@@ -1,3 +1,4 @@
+import React from 'react';
 import ErrorScreen from './Screens/ErrorScreen'
 import RepoScreen from './Screens/RepoScreen'
 import './App.css';
