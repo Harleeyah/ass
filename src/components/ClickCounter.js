@@ -21,7 +21,7 @@ export const ClickCounter = () => {
     }
     return(
         <div>
-            <button  onClick={handleClick}>Counter {count}</button>
+            <button className='handle' onClick={handleClick}>Counter {count}</button>
         </div>
     )
 }
