@@ -1,52 +1,35 @@
-import React,{useState, useEffect} from 'react';
-import Repos from './components/Repos';
-import Pagination from './components/Pagination';
-import axios from 'axios';
+import ErrorScreen from './Screens/ErrorScreen'
+import RepoScreen from './Screens/RepoScreen'
 import './App.css';
+import HomeScreen from './Screens/HomeScreen';
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Routes
+} from "react-router-dom";
+
 
 function App() {
-  const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [reposPerPage ] = useState(5);
+  return(
+    <Router>
+      <div>
+        <nav className='navbar'>
+          <Link to="/">Home</Link>
+          <Link to="/RepoScreen">My GitHub Repos</Link>
+          <Link to="/ErrorScreen">Error</Link>
+        </nav>
 
-  useEffect(() => {
-    const fetchRepos = async () => {
-      setLoading(true);
-      const res = await axios.get('https://api.github.com/users/Harleeyah/repos');
-      setRepos(res.data);
-      setLoading(false);
-    }
+        <Routes>
+          <Route path="/" element = {<HomeScreen />} />
+          <Route path="/RepoScreen" element = {<RepoScreen/>} />
+          <Route path="/ErrorScreen" element = {<ErrorScreen/>} />
+        </Routes>
+      </div>  
+    </Router>
+  )
 
-    fetchRepos();
-  },[]);
-
-  console.log(repos)
-
-  //Get Current Repos
-  const indexOfLastRepo = currentPage * reposPerPage;
-  const indexOfFirstRepo = indexOfLastRepo - reposPerPage;
-  const currentRepos = repos.slice(indexOfFirstRepo, indexOfLastRepo);
-
-
-  //change page
-  const paginate = pageNumber => setCurrentPage(pageNumber);
- 
-  return (
-    <div className='App'>
-      <nav className='navbar'>
-        <a className='home-link' href='https://web-platform-bgexer.stackblitz.io'><h5>Home</h5></a>
-        <h1 className='github-repos'>My Github Repos</h1>
-        <a href='https://assignment-omega-nine.vercel.app/'><h4>Error</h4></a>
-      </nav>
-      <Repos repos={currentRepos} loading={loading}/>
-      <Pagination
-        reposPerPage={reposPerPage} 
-        totalRepos={repos.length} 
-        paginate={paginate}
-      />
-    </div>
-  );
 }
 
-export default App;
+export default App
