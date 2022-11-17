@@ -1,5 +1,4 @@
 import React from 'react';
-import Person  from '../Components/Person'
 import { ClickCounter } from '../Components/ClickCounter'
 import { ErrorBoundary } from "react-error-boundary";
 import { Fallback } from '../Components/Fallback'
@@ -17,7 +16,9 @@ function ErrorScreen() {
     return (
       <div className="App">
         <ErrorBoundary FallbackComponent={Fallback} onError={errorHandler}>
-          <Person person={person}/>
+           <div>
+            <h1>HELLO {person.firstName.toUpperCase()} {person.lastName.toUpperCase()}</h1>
+          </div>
           {/* <Person person={{}}/> */}
           <ClickCounter/>
        </ErrorBoundary>
