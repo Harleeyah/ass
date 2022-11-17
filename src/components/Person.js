@@ -1,8 +1,10 @@
 import React from "react"
-export const Person = ({ person }) => {
+const Person = ({ person }) => {
     return(
         <h1>
             HELLO {person.firstName.toUpperCase()} {person.lastName.toUpperCase()}
         </h1>
     )
 }
+
+export default Person
