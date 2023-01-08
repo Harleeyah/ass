@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
-import Repos from '../components/Repos'
-import Pagination from "../components/Pagination"
+import Repos from '../Components/Repos'
+import Pagination from "../Components/Pagination"
 import axios from 'axios'
 
 const RepoScreen = () => {
