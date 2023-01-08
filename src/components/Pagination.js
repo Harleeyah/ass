@@ -11,9 +11,9 @@ const Pagination = ({reposPerPage, totalRepos, paginate}) => {
       <div className='Pagination'>
         {pageNumbers.map(number => (
           <i key={number} className='page-item'>
-           <button className='counter' ><a onClick={() => paginate(number)} className='page-link'>
+           <button className='counter'  onClick={() => paginate(number)}>
               {number}
-            </a></button>
+           </button>
           </i>
         ))}
       </div>

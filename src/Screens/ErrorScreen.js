@@ -1,7 +1,7 @@
 import React from 'react';
-import { ClickCounter } from '../Components/ClickCounter'
+import { ClickCounter } from '../components/ClickCounter'
 import { ErrorBoundary } from "react-error-boundary";
-import { Fallback } from '../Components/Fallback'
+import { Fallback } from '../components/Fallback'
 
 function ErrorScreen() {
     const person = {
