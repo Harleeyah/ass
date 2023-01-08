@@ -1,7 +1,7 @@
  body{
   height: 100%;
   width: 100%;
-  background: URL(https://img.freepik.com/free-photo/bokeh-background-with-grey-border_53876-127347.jpg?size=626&ext=jpg&ga=GA1.2.1223172560.1667930608&semt=sph)center no-repeat;
+  background: URL(https://img.freepik.com/free-photo/texture-abstract-waving-red-fibers_23-2148066663.jpg?size=626&ext=jpg&uid=R89509410&ga=GA1.1.1223172560.1667930608&semt=ais)center no-repeat;
   background-size: cover;
   font-family: sans-serif;
   font-size: 20px;
@@ -16,8 +16,9 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: gray;
-  padding:15px;
+  background-color: #C2A881;
+  padding:25px;
+  opacity: 0.4;
 }
 
 .home-link{
@@ -38,11 +39,11 @@ a{
 }
 
 button{
-  padding: 20px;
-  background-color: #0064AD;
+  padding: 15px;
+  background-color:#CAB68F;
   border-radius: 10px;
   width: 20%;
-  border-color: #0064AD;
+  border-color: #6A6FF5;
 }
 
 .went-wrong{
@@ -53,15 +54,9 @@ button{
   color: blue;
 }
 
-.Homebutton {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #9f5b00;
-  padding: 10px;
-  height: 50px;
-  width: 30%;
-  font-size: large;
-  border-radius: 16px;
-  border-color: #9f5b00;
+
+.Homescreen{
+  margin-top: 200px;
 }
 
 .HomeLink {
@@ -76,9 +71,20 @@ footer {
 }
 
 .list-group{
-  text-align: left;
+  margin-top: 150px;
+}
+
+.list-group-item{
+  margin: 20px;
+  text-align: center;
 }
 
 .counter{
-  width: 5%;
+  width: 4%;
+  margin-left: 5px;
+}
+
+.App{
+  margin-top: 270px;
+  
 }

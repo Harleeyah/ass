@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { ClickCounter } from '../Components/ClickCounter';
 import { ErrorBoundary } from "react-error-boundary";
 import { Fallback } from '../Components/Fallback';

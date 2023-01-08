@@ -3,7 +3,7 @@ import React from "react"
 function HomeScreen (){
 
     return (
-      <div>
+      <div className="Homescreen">
          <h1>ALIYAH</h1>
          <div className="body">
             <h2>My GitHub Repositories</h2>
